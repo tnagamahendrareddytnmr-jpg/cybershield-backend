@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const API_BASE_URL = "https://cybershield-backend-1-138u.onrender.com";
+
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'https://cybershield-backend-1-138u.onrender.com/api',
+  baseURL: process.env.REACT_APP_API_URL || `${API_BASE_URL}/api`,
 });
 
 API.interceptors.request.use((config) => {
@@ -13,3 +15,4 @@ API.interceptors.request.use((config) => {
 });
 
 export default API;
+export { API_BASE_URL };
