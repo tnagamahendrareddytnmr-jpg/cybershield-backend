@@ -12,6 +12,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../dist'))); // Serve built frontend files
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.send('CyberShield360 Backend is running successfully!');
+});
+
 // In-memory database array for community scam feeds
 let communityScamsDb = [
   { 
