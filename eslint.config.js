@@ -19,7 +19,7 @@ export default defineConfig([
     },
   },
   {
-    files: ['cybershield-backend/**/*.js'],
+    files: ['cybershield-backend/**/*.js', 'server.js', 'src/services/api.js'],
     languageOptions: {
       globals: globals.node,
     },
