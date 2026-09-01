@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // Must match your backend port!
+  baseURL: process.env.REACT_APP_API_URL || 'https://cybershield-backend-1-138u.onrender.com/api',
 });
 
 API.interceptors.request.use((config) => {
